@@ -1,0 +1,13 @@
+<h1> BlogPosts </h1>
+<hr/>
+
+<% @blog_posts.each do |blog_post| %>
+	<div>
+		<b><%= blog_post.title %> </b> <br/>
+		Blog : <%= blog_post.blog.title %> <br/>
+		<%= blog_post.published? ? "Published" : "Draft" %> <br/>
+		<%= "Published At: #{blog_post.published_at}" if blog_post.published? %> <br/>
+		<%= blog_post.author %>
+		<%= link_to "View More", blog_blog_post_path(@blog, blog_post) %> | <%= link_to "Edit", edit_blog_blog_post_path(@blog, blog_post) %>
+	</div>
+<% end %>

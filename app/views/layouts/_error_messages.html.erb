@@ -1,0 +1,11 @@
+<% unless object.errors.empty? %>
+   <div class="error">
+      <b> Errors submitting the form </b>
+      <ul>
+      <% object.errors.full_messages.each do |fm| %>
+         <li><%= fm %></li>
+      <% end %>
+      </ul>
+   </div>
+<% end %>
+

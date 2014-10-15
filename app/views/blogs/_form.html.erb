@@ -1,0 +1,40 @@
+<%= render 'layouts/error_messages', :object => @blog %>
+<!-- HTML for the form >
+
+<form action="/blogs" method="post" id="new_blog" class="">
+
+	<label>Title</label> <br/>
+	<input type="text" name="post[title]" id="" class="" value="< @blog.title >"/>
+	
+</form>
+
+-->
+
+<!-- 
+	Rails provides form helpers to write HTML forms easily 
+	
+	The following methods used can be found in ActionView::Helpers::FormHelper. 
+
+   Please check the documentation of this module to get the list of all methods 
+
+   available.
+
+-->
+
+<%= form_for(@blog) do |f| %>
+	
+	<%= f.label :title %>  <!-- calling the label method of the ActionView::Helpers::FormHelper -->
+	<%= f.text_field :title %> <br/> <!-- calling the text_field method of the ActionView::Helpers::FormHelper -->
+
+	<%= f.label :summary %>
+	<%= f.text_area :summary %> <br/>
+
+	<%= f.label :keywords %>
+	<%= f.text_field :keywords %> <br/>
+
+	<%= f.label :published %>
+	<%= f.check_box :published %>  <br/>
+
+	<%= f.submit %>
+<% end %>
+

@@ -1,0 +1,85 @@
+View files in Rails 
+===================
+
+<!-- 
+<% %> #=> Evaluates the code, but doesn't print the output of the evaulation
+<%= %> #=> Evaluates the code and prints the output of the evaluation
+
+-->
+
+Day 1:
+=====
+
+Part 1: Blog Feature where a guest user can also create/edit/read/delete Blogs
+
+1. Create the Blog Feature in the System.
+2. Create Models (required Association, Validations, Scopes), Controllers and Views for this feature.
+3. Create DB Migration file for this feature.
+4. Migrate the Database
+5. Create Routes corresponding to this feature.
+6. Access this feature of the application from the browser
+7. Test the Create, Edit, Read and Delete functionalities
+
+Part 2: BlogPost feature where any user can create/edit/read/delete BlogPost with-in a Blog
+
+1. Create the BlogPost feature in the System.
+2. Create Models(required Associations, Validations, Scopes), Controllers and Views for this feature.
+3. Create DB Migration file for this feature.
+4. Migrate the Database
+5. Create Routes corresponding to this feature.
+6. Access this feature of the application from the browser
+7. Test the Create, Edit, Read and Delete functionalities
+
+Part 3: Make sure the BlogPost is accessible only through the Blog
+ 
+1. Lets say there is a Blog of 'My India Travel' and its URL is /blogs/my-india-travel.
+2. Lets say there is a BlogPost in this Blog titled 'Visiting Bangalore and surroundings' and its URL is /blog_posts/visiting-bangalore-and-surroundings
+3. The objective of this exercise is to make sure that the BlogPost is accessible only by URL /blogs/my-india-travel/blog_posts/visiting-bangalore-and-surroundings.
+
+
+Day 2:
+======
+
+Part 1: Adding commenting feature to the Blogger
+
+1. Create the Comment feature.
+2. Create Model (required Associations, Validations, Scopes), Controllers and Views for this feature.
+3. Create DB Migration file for this feature.
+4. Migrate the Database
+5. Create Routes corresponding to this feature.
+6. Enable commenting on the published BlogPosts.
+7. The comment should be associated with the BlogPost.
+8. By default the comment should be unapproved and the owner of the BlogPost should have right to approve it or not.
+
+
+Part 2: Adding Authentication System
+
+1. User Account Registration 
+2. User Account Activation
+3. When a logged-in user creates a Blog, then he becomes the owner of the Blog.
+4. When a logged-in user creates a BlogPost in a Blog that he owns, he becomes the author of the BlogPost.
+5. The Blog Owner should be able to Publish/Unpublish a Blog. The BlogPost author should be able to Publish/Unpublish the BlogPost.
+6. The BlogPost author should be able to moderate the comments posted on that BlogPost
+7. When a logged-in user tries to add a comment for a BlogPost, the comment form shouldn't ask for Name and Email.
+
+
+Part 3: Adding User & Admin Dashboard
+
+1. Every logged-in user should get a Dashboard. This Dashboard will have 
+	
+	a. List of all the Blogs that this user has created.
+	b. List of all the BlogPosts that this user has authored.
+   c. List of all the Comments that are posted by this user on different posts.
+   d. List of all the Comments that this user can moderate
+
+
+2. Every Admin should get access to an Admin Dashboard. This will have 
+
+   a. List of all the Blogs in the system with links to publish/unpublish, Edit and Delete.
+   b. List of all the BlogPosts in all the Blogs in the system with links to publish/unpublish, Edit and Delete.
+   c. List of all the Comments in all the system with links to approve/disapprove, Edit, Delete.
+   d. List of all the Users in the system with links to suspend/revoke and delete users.
+
+Part 4: UserProfile for the User
+
+

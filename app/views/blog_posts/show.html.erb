@@ -1,0 +1,17 @@
+<h1> BlogPost: <%= @blog_post.title %></h1>
+<div><%= @blog_post.author %>, <%= @blog_post.published? ? @blog_post.published_at : "Draft" %>
+<hr/>
+<p>
+	<%= @blog_post.description %>
+</p>
+
+<%= link_to "Back to Index", blog_blog_posts_path(@blog) %> | <%= link_to "Edit", edit_blog_blog_post_path(@blog, @blog_post) %>
+
+<hr/>
+<b>Comments</b>
+
+<%= render 'comments' %>
+
+<hr/>
+<b> Add Comment</b>
+<%= render 'comments/form' %>

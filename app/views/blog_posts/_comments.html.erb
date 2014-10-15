@@ -1,0 +1,10 @@
+<% if @comments.empty? %>
+	<i>No comments posted for this blog post</i>
+<% end %>
+
+<% @comments.each do |comment| %>
+	<div>
+		<%= comment.comment %> <br/>
+		<em>Posted by</em> <%= comment.name %>
+	</div>
+<% end %>

@@ -1,0 +1,14 @@
+<%= render 'layouts/error_messages', :object => @comment %>
+
+<%= form_for ([@blog, @blog_post, @comment]) do |f| %>
+	<%= f.label :name%> <br/>
+	<%= f.text_field :name%> <br/><br/>
+
+	<%= f.label :email%><br/>
+	<%= f.text_field :email%><br/><br/>
+	
+	<%= f.label :comment %><br/>
+	<%= f.text_area :comment %><br/><br/>
+
+	<%= f.submit %>
+<% end %>

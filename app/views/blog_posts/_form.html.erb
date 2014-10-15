@@ -1,0 +1,27 @@
+<%= render 'layouts/error_messages', :object => @blog_post %>
+
+<%= form_for ([@blog, @blog_post]) do |f| %>
+	<%= f.label :title %> <br/>
+	<%= f.text_field :title %> <br/><br/>
+
+	<%= f.label :author %><br/>
+	<%= f.text_field :author %><br/><br/>
+	
+	<%= f.label :keywords %><br/>
+	<%= f.text_field :keywords %><br/><br/>
+	
+	<%= f.label :Blog %><br/>
+	<%= f.select :blog_id, @blogs.collect {|b| [b.title, b.id] }, :include_blank => true %> <br/><br/>
+	
+
+	<%= f.label :description %><br/>
+	<%= f.text_area :description %><br/><br/>
+
+	<%= f.check_box :published %>
+	<%= f.label :published %> <br/><br/>
+
+	<%= f.label :published_at %><br/>
+	<%= f.date_select :published_at %><br/><br/>
+
+	<%= f.submit %>
+<% end %>
